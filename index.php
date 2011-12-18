@@ -45,10 +45,10 @@ if (isset($_REQUEST['wipe'])) {
       $usuario = @mysql_fetch_array(mysql_query("SELECT * FROM `Users` WHERE `ID` = '{$_SESSION["access_token"]["user_id"]}'"));
 
       if (!isset($usuario["ID"])) {
-         mysql_query("INSERT INTO `Users` (`ID`, `screen_name`, `Nombre`, `oauth_token`, `oauth_token_secret` `Usos`) VALUES ('{$_SESSION["access_token"]["user_id"]}', '{$_SESSION["access_token"]["screen_name"]}', '{$credenciales->name}', '{$_SESSION['access_token']['oauth_token']}', '{$_SESSION['access_token']['oauth_token_secret']}', '1')");
+         mysql_query("INSERT INTO `Users` (`ID`, `screen_name`, `Nombre`, `Usos`) VALUES ('{$_SESSION["access_token"]["user_id"]}', '{$_SESSION["access_token"]["screen_name"]}', '{$credenciales->name}', '1')");
       } else {
          $usos = $usuario["Usos"] + 1;
-         mysql_query("UPDATE `Users` SET `Usos` = '{$usos}', `oauth_token` = '{$_SESSION['access_token']['oauth_token']}', `oauth_token_secret` = '{$_SESSION['access_token']['oauth_token_secret']}' WHERE `Users`.`ID` = '{$_SESSION["access_token"]["user_id"]}'");
+         mysql_query("UPDATE `Users` SET `Usos` = '{$usos}' WHERE `Users`.`ID` = '{$_SESSION["access_token"]["user_id"]}'");
       }
 
       setcookie("db", 1);
