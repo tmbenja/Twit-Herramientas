@@ -1,0 +1,72 @@
+/* 
+    Document   : todo
+    Created on : 30-sep-2010, 16:15:02
+    Author     : roobre
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body {
+    background-image: url('http://img.twit-herramientas.com/nubes.jpg');
+    background-repeat: repeat-x;
+    background-position: top left;
+    background-attachment: scroll;
+    background-color: #c0deed;
+    margin: 33px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font: 13px/1.5 'Helvetica Neue','Arial','Helvetica','Liberation Sans','FreeSans','sans-serif';
+
+}
+
+table {
+    width: 650px;
+}
+th {
+    text-align: center
+}
+td {
+  vertical-align: top;
+}
+
+hr {
+    border-style:none none solid;
+    border-width:0 0 1px;
+    clear:both;
+    color:#FFFFFF;
+    height:2px;
+    width: 750px;
+}
+
+img{
+    border: 0
+}
+
+a:link, a:visited {
+    color: black;
+    text-decoration: none;
+
+}
+
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.app{
+    width: auto;
+}
+
+.footer{
+    position:fixed;
+    bottom:10px;
+    right: auto;
+    font-size: small;
+    font-style: italic;
+}
+
+.plusone{
+    position:fixed;
+    bottom:50px;
+    right: auto;
+}

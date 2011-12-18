@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <link type="text/css" rel="stylesheet" media="screen" href="todo.css">
+      <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+      <title>Twit-Herramientas | Saca un mayor provecho a Twitter</title>
+   </head>
+   <body>
+      <p align="center"><a href="/"><img src="http://img.twit-herramientas.com/logo.png" alt="Logo"></a></p>
+      <a href="/"><img style="position:fixed;bottom:0%; right:2%" src="../icon.png" alt="Icono"></a>
+      <div style="margin-top: 100px">
+         <h1 align="center">Preguntas frecuentes</h1>
+         <p align="center">Por favor, lea esto antes de enviar una sugerencia. Puede que ya esté contestada, o que sea imposible de hacer.</p>
+         <br /><br />
+         <hr>
+         <h2>¿Se puede hacer una herramienta para ver que usuarios me han bloqueado?</h2>
+         <p>No. Las Twit-Herramientas están limitadas a los servicios que Twitter© ofrece mediante su API. Es imposible ver quiénes te han bloqueado.</p>
+         <hr>
+         <h2>¿Hay alguna posibilidad de saber quienes visitan mi perfil, o que usuarios están conectados en un momento determinado?</h2>
+         <p>No. Las Twit-Herramientas ofrecen servicios externos a cualquer cliente de twitter, y no pueden modificar la apariencia de tu página principal
+            de twitter. Además, es imposible conocer esos datos ;)</p>
+         <hr>
+         <div align="center">
+            <script type="text/javascript" src="http://widgets.twimg.com/j/2/widget.js"></script>
+            <script type="text/javascript">
+               new TWTR.Widget({
+                  version: 2,
+                  type: 'profile',
+                  rpp: 4,
+                  interval: 6000,
+                  width: 600,
+                  height: 250,
+                  theme: {
+                     shell: {
+                        background: '#333333',
+                        color: '#ffffff'
+                     },
+                     tweets: {
+                        background: '#000000',
+                        color: '#ffffff',
+                        links: '#4aed05'
+                     }
+                  },
+                  features: {
+                     scrollbar: false,
+                     loop: false,
+                     live: false,
+                     hashtags: true,
+                     timestamp: true,
+                     avatars: false,
+                     behavior: 'all'
+                  }
+               }).render().setUser('tw_herramientas').start();
+            </script>
+         </div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,5 @@
+User-agent: *
+Sitemap: /sitemap.xml
+Disallow: /faq.html
+Disallow: /ErrorDocument
+Disallow: /ErrorDocument/*
